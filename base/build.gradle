@@ -1,0 +1,21 @@
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+wrapper {
+    gradleVersion = "4.2.1"
+    distributionType = Wrapper.DistributionType.ALL
+}
+
+repositories {
+    mavenLocal()
+}
+
+dependencies {
+    compile group: 'com.example', name: 'transitive-core', version: '1.0-SNAPSHOT'
+    compile group: 'com.example', name: 'composite-core', version: '1.0-SNAPSHOT'
+}

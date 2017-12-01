@@ -1,0 +1,5 @@
+rootProject.name = 'transitive'
+
+include 'transitive-core'
+include 'transitive-dependency'
+
